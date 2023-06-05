@@ -1,8 +1,4 @@
 class Game {
-    constructor() {
-        Game.start();
-    }
-
     static update() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
