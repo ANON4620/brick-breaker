@@ -20,20 +20,20 @@ class Paddle {
         ctx.fillRect(x, y, width, height);
     }
 
-    move(e) {
-        if(this.touchingEdge(e)) {
+    move(pointerX) {
+        if(this.touchingEdge(pointerX)) {
             return;
         }
         
-        this.x = e.clientX - (this.width / 2);
+        this.x = pointerX - (this.width / 2);
     }
 
-    touchingEdge(e) {
-        if(e.clientX <= (this.width / 2)) {
+    touchingEdge(pointerX) {
+        if(pointerX <= (this.width / 2)) {
             this.x = 0;
             return true;
         }
-        else if(e.clientX >= canvas.width - (this.width / 2)) {
+        else if(pointerX >= canvas.width - (this.width / 2)) {
             this.x = canvas.width - this.width;
             return true;
         }
