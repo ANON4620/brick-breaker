@@ -64,12 +64,12 @@ class Ball {
         const objectHeightMidPoint = object.y + (object.height / 2);
         const objectWidthMidPoint = object.x + (object.width / 2);
         
-        const dist = ballWidthMidPoint - objectWidthMidPoint; // 10% of object width from the mid point of object
+        const dist = ballWidthMidPoint - objectWidthMidPoint;
         
         // check Top and Bottom Edge of Object
         if(ballRightEdge >= objectLeftEdge && ballLeftEdge <= objectRightEdge) {
             if(ballBottomEdge >= objectTopEdge && ballBottomEdge <= objectHeightMidPoint) {
-                const angle = (10 / 100) * dist;
+                const angle = (10 / 100) * dist; // 10% of object width from the mid point of object
                 this.y = objectTopEdge - this.radius;
                 this.speedX = angle;
                 this.speedY = -this.speedY;
